@@ -4,6 +4,16 @@ import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import difflib
+import os
+
+file_path = 'movie_recommendation_model.pkl'
+
+if os.path.exists(file_path):
+    with open(file_path, 'rb') as file:
+        # rest of the code
+else:
+    print(f"File '{file_path}' not found.")
+
 
 # Load the saved components from the pickle file
 with open('movie_recommendation_model.pkl', 'rb') as file:
