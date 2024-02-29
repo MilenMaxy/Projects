@@ -11,8 +11,7 @@ file_path = 'movie_recommendation_model.pkl'
 if os.path.exists(file_path):
     with open(file_path, 'rb') as file:
         # rest of the code
-else:
-    print(f"File '{file_path}' not found.")
+
 
 
 # Load the saved components from the pickle file
@@ -58,3 +57,5 @@ if user_input:
     else:
         st.warning("Sorry! No close matches found for the entered movie name.")
 
+else:
+    print(f"File '{file_path}' not found.")
