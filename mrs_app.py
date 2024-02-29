@@ -4,15 +4,6 @@ import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import difflib
-import os
-
-file_path = 'movie_recommendation_model.pkl'
-
-if os.path.exists(file_path):
-    with open(file_path, 'rb') as file:
-        # rest of the code
-
-
 
 # Load the saved components from the pickle file
 with open('movie_recommendation_model.pkl', 'rb') as file:
@@ -56,6 +47,3 @@ if user_input:
             st.write(f"{i}. {movie_title}")
     else:
         st.warning("Sorry! No close matches found for the entered movie name.")
-
-else:
-    print(f"File '{file_path}' not found.")
